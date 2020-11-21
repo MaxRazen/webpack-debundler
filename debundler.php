@@ -33,7 +33,6 @@ function main() {
 
 function processBundle() {
     global $bundle, $packages, $rowCounter;
-    file_put_contents('results.txt', '');
 
     while ($row = fgets($bundle)) {
         processBundleRow($row);
