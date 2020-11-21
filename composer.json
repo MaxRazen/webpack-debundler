@@ -1,0 +1,15 @@
+{
+    "name": "maxwell-hub/webpack-debundler",
+    "description": "Decompile webpack bundle file to sources",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Helpers\\": "src/Helpers/"
+        }
+    }
+}
