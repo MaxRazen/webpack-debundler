@@ -120,7 +120,7 @@ function extractFileName(string $path): string {
 }
 
 function extractPackageName(string $path) {
-    return preg_replace('/.\/node_modules\/([^\/]+)\/([^\/]+)\/.+/', '$1/$2', $path);
+    return preg_replace('/.\/node_modules\/(.+)/', '$1', $path);
 }
 
 function makeFilePath(string $path = ''): string {

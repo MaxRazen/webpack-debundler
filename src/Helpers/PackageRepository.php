@@ -20,10 +20,10 @@ class PackageRepository
 
     public function savePackages(string $path)
     {
-        $packages = json_encode([
-            'dependencies' => array_unique($this->packages)
-        ]);
+        $json = json_encode([
+            'dependencies' => array_values(array_unique($this->packages))
+        ], JSON_PRETTY_PRINT);
 
-        file_put_contents("{$path}/packages.json", $packages);
+        file_put_contents("{$path}/packages.json", stripslashes($json));
     }
 }
